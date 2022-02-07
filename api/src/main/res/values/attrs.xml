@@ -21,6 +21,12 @@
             <enum name="leftTop" value="3" />
             <enum name="leftCenter" value="4" />
             <enum name="leftBottom" value="5" />
+            <enum name="centerTop" value="6" />
+            <enum name="centerBottom" value="7" />
+            <enum name="centerLeftTop" value="8" />
+            <enum name="centerLeftBottom" value="9" />
+            <enum name="centerRightTop" value="10" />
+            <enum name="centerRightBottom" value="11" />
         </attr>
         <!-- 是否可以拖拽删除徽章 -->
         <attr name="badge_draggable" format="boolean" />
