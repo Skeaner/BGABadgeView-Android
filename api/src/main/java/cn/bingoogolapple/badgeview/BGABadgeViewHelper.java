@@ -352,6 +352,18 @@ public class BGABadgeViewHelper {
             case RightBottom:
                 mBadgeRectF.top = mBadgeable.getHeight() - mBitmap.getHeight() - mBadgeVerticalMargin;
                 break;
+            case LeftTop:
+                mBadgeRectF.top = mBadgeVerticalMargin;
+                mBadgeRectF.left=mBadgeHorizontalMargin;
+                break;
+            case LeftCenter:
+                mBadgeRectF.top = (mBadgeable.getHeight() - mBitmap.getHeight()) / 2;
+                mBadgeRectF.left=mBadgeHorizontalMargin;
+                break;
+            case LeftBottom:
+                mBadgeRectF.top = mBadgeable.getHeight() - mBitmap.getHeight() - mBadgeVerticalMargin;
+                mBadgeRectF.left=mBadgeHorizontalMargin;
+                break;
             default:
                 break;
         }
@@ -387,14 +399,39 @@ public class BGABadgeViewHelper {
         mBadgeRectF.bottom = mBadgeable.getHeight() - mBadgeVerticalMargin;
         switch (mBadgeGravity) {
             case RightTop:
-                mBadgeRectF.bottom = mBadgeRectF.top + badgeHeight;
+                mBadgeRectF.bottom = mBadgeRectF.top + badgeHeight;        
+                // 计算徽章背景左右的值
+                mBadgeRectF.right = mBadgeable.getWidth() - mBadgeHorizontalMargin;
+                mBadgeRectF.left = mBadgeRectF.right - badgeWidth;
                 break;
             case RightCenter:
                 mBadgeRectF.top = (mBadgeable.getHeight() - badgeHeight) / 2;
                 mBadgeRectF.bottom = mBadgeRectF.top + badgeHeight;
+                // 计算徽章背景左右的值
+                mBadgeRectF.right = mBadgeable.getWidth() - mBadgeHorizontalMargin;
+                mBadgeRectF.left = mBadgeRectF.right - badgeWidth;
                 break;
             case RightBottom:
                 mBadgeRectF.top = mBadgeRectF.bottom - badgeHeight;
+                // 计算徽章背景左右的值
+                mBadgeRectF.right = mBadgeable.getWidth() - mBadgeHorizontalMargin;
+                mBadgeRectF.left = mBadgeRectF.right - badgeWidth;
+                break;
+            case LeftTop:
+                mBadgeRectF.bottom = mBadgeRectF.top + badgeHeight;
+                mBadgeRectF.left = mBadgeHorizontalMargin;
+                mBadgeRectF.right = mBadgeRectF.left+badgeWidth;
+                break;
+            case LeftCenter:
+                mBadgeRectF.top = (mBadgeable.getHeight() - badgeHeight) / 2;
+                mBadgeRectF.bottom = mBadgeRectF.top + badgeHeight;
+                mBadgeRectF.left = mBadgeHorizontalMargin;
+                mBadgeRectF.right = mBadgeRectF.left+badgeWidth;
+                break;
+            case LeftBottom:
+                mBadgeRectF.top = mBadgeRectF.bottom - badgeHeight;
+                mBadgeRectF.left = mBadgeHorizontalMargin;
+                mBadgeRectF.right = mBadgeRectF.left+badgeWidth;
                 break;
             default:
                 break;
@@ -516,6 +553,9 @@ public class BGABadgeViewHelper {
     public enum BadgeGravity {
         RightTop,
         RightCenter,
-        RightBottom
+        RightBottom,
+        LeftTop,
+        LeftCenter,
+        LeftBottom
     }
 }
