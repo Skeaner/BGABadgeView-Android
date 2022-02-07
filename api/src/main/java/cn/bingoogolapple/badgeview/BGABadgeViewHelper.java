@@ -374,11 +374,11 @@ public class BGABadgeViewHelper {
                 break;
             case CenterLeftTop:
                 mBadgeRectF.top = mBadgeVerticalMargin;
-                mBadgeRectF.left = mBadgeable.getWidth()/2 - mBitmap.getWidth())- mBadgeVerticalMargin;
+                mBadgeRectF.left = mBadgeable.getWidth()/2 - mBitmap.getWidth()- mBadgeVerticalMargin;
                 break;
             case CenterLeftBottom:
                 mBadgeRectF.top = mBadgeable.getHeight() - mBitmap.getHeight() - mBadgeVerticalMargin;
-                mBadgeRectF.left = mBadgeable.getWidth()/2 - mBitmap.getWidth())- mBadgeVerticalMargin;
+                mBadgeRectF.left = mBadgeable.getWidth()/2 - mBitmap.getWidth()- mBadgeVerticalMargin;
                 break;
             case CenterRightTop:
                 mBadgeRectF.top = mBadgeVerticalMargin;
