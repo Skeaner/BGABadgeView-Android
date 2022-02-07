@@ -437,9 +437,6 @@ public class BGABadgeViewHelper {
                 break;
         }
 
-        // 计算徽章背景左右的值
-        mBadgeRectF.right = mBadgeable.getWidth() - mBadgeHorizontalMargin;
-        mBadgeRectF.left = mBadgeRectF.right - badgeWidth;
 
         if (mBadgeBorderWidth > 0) {
             // 设置徽章边框景色
