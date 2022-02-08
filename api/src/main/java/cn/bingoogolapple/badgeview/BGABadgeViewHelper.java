@@ -368,6 +368,10 @@ public class BGABadgeViewHelper {
                 mBadgeRectF.top = mBadgeVerticalMargin;
                 mBadgeRectF.left = (mBadgeable.getWidth() - mBitmap.getWidth()) / 2;
                 break;
+            case CenterCenter:
+                mBadgeRectF.top = (mBadgeable.getHeight() - mBitmap.getHeight()) / 2;
+                mBadgeRectF.left = (mBadgeable.getWidth() - mBitmap.getWidth()) / 2;
+                break;
             case CenterBottom:
                 mBadgeRectF.top = mBadgeable.getHeight() - mBitmap.getHeight() - mBadgeVerticalMargin;
                 mBadgeRectF.left = (mBadgeable.getWidth() - mBitmap.getWidth()) / 2;
@@ -376,12 +380,20 @@ public class BGABadgeViewHelper {
                 mBadgeRectF.top = mBadgeVerticalMargin;
                 mBadgeRectF.left = mBadgeable.getWidth()/2 - mBitmap.getWidth()- mBadgeVerticalMargin;
                 break;
+            case CenterLeftCenter:
+                mBadgeRectF.top = (mBadgeable.getHeight() - mBitmap.getHeight()) / 2;
+                mBadgeRectF.left = mBadgeable.getWidth()/2 - mBitmap.getWidth()- mBadgeVerticalMargin;
+                break;
             case CenterLeftBottom:
                 mBadgeRectF.top = mBadgeable.getHeight() - mBitmap.getHeight() - mBadgeVerticalMargin;
                 mBadgeRectF.left = mBadgeable.getWidth()/2 - mBitmap.getWidth()- mBadgeVerticalMargin;
                 break;
             case CenterRightTop:
                 mBadgeRectF.top = mBadgeVerticalMargin;
+                mBadgeRectF.left = mBadgeable.getWidth()/2 + mBadgeVerticalMargin;
+                break;
+            case CenterRightCenter:
+                mBadgeRectF.top = (mBadgeable.getHeight() - mBitmap.getHeight()) / 2;
                 mBadgeRectF.left = mBadgeable.getWidth()/2 + mBadgeVerticalMargin;
                 break;
             case CenterRightBottom:
@@ -462,6 +474,12 @@ public class BGABadgeViewHelper {
                 mBadgeRectF.left = (mBadgeable.getWidth() - badgeWidth) / 2;
                 mBadgeRectF.right = mBadgeRectF.left + badgeWidth;
                 break;
+            case CenterCenter:
+                mBadgeRectF.top = (mBadgeable.getHeight() - badgeHeight) / 2;
+                mBadgeRectF.bottom = mBadgeRectF.top + badgeHeight;
+                mBadgeRectF.left = (mBadgeable.getWidth() - badgeWidth) / 2;
+                mBadgeRectF.right = mBadgeRectF.left + badgeWidth;
+                break;
             case  CenterBottom:
                 mBadgeRectF.top = mBadgeRectF.bottom - badgeHeight;
                 mBadgeRectF.left = (mBadgeable.getWidth() - badgeWidth) / 2;
@@ -472,12 +490,24 @@ public class BGABadgeViewHelper {
                 mBadgeRectF.left = mBadgeable.getWidth()/2 - badgeWidth - mBadgeHorizontalMargin;
                 mBadgeRectF.right = mBadgeRectF.left + badgeWidth;
                 break;
+            case CenterLeftCenter:
+                mBadgeRectF.top = (mBadgeable.getHeight() - badgeHeight) / 2;
+                mBadgeRectF.bottom = mBadgeRectF.top + badgeHeight;
+                mBadgeRectF.left = mBadgeable.getWidth()/2 - badgeWidth - mBadgeHorizontalMargin;
+                mBadgeRectF.right = mBadgeRectF.left + badgeWidth;
+                break;
             case  CenterLeftBottom:
                 mBadgeRectF.top = mBadgeRectF.bottom - badgeHeight;
                 mBadgeRectF.left = mBadgeable.getWidth()/2 - badgeWidth - mBadgeHorizontalMargin;
                 mBadgeRectF.right = mBadgeRectF.left + badgeWidth;
                 break;
             case  CenterRightTop:
+                mBadgeRectF.bottom = mBadgeRectF.top + badgeHeight;
+                mBadgeRectF.left = mBadgeable.getWidth()/2 + mBadgeHorizontalMargin;
+                mBadgeRectF.right = mBadgeRectF.left + badgeWidth;
+                break;
+            case CenterRightCenter:
+                mBadgeRectF.top = (mBadgeable.getHeight() - badgeHeight) / 2;
                 mBadgeRectF.bottom = mBadgeRectF.top + badgeHeight;
                 mBadgeRectF.left = mBadgeable.getWidth()/2 + mBadgeHorizontalMargin;
                 mBadgeRectF.right = mBadgeRectF.left + badgeWidth;
@@ -609,10 +639,13 @@ public class BGABadgeViewHelper {
         LeftCenter,
         LeftBottom,
         CenterTop,
+        CenterCenter,
         CenterBottom,
         CenterLeftTop,
+        CenterLeftCenter,
         CenterLeftBottom,
         CenterRightTop,
+        CenterRightCenter,
         CenterRightBottom
     }
 }
