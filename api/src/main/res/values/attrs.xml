@@ -22,11 +22,14 @@
             <enum name="leftCenter" value="4" />
             <enum name="leftBottom" value="5" />
             <enum name="centerTop" value="6" />
-            <enum name="centerBottom" value="7" />
-            <enum name="centerLeftTop" value="8" />
-            <enum name="centerLeftBottom" value="9" />
-            <enum name="centerRightTop" value="10" />
-            <enum name="centerRightBottom" value="11" />
+            <enum name="centerCenter" value="7" />
+            <enum name="centerBottom" value="8" />
+            <enum name="centerLeftTop" value="9" />
+            <enum name="centerLeftCenter" value="10" />
+            <enum name="centerLeftBottom" value="11" />
+            <enum name="centerRightTop" value="12" />
+            <enum name="centerRightCenter" value="13" />
+            <enum name="centerRightBottom" value="14" />
         </attr>
         <!-- 是否可以拖拽删除徽章 -->
         <attr name="badge_draggable" format="boolean" />
